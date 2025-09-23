@@ -1,0 +1,30 @@
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.log
+*.tmp
+*.bak
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+venv/
+*.egg-info/
+
+# PHP
+vendor/
+
+# Base de datos local
+*.sqlite3
+
+# Node (si se usa algo de npm para el frontend)
+node_modules/
+
+# VSCode
+.vscode/
