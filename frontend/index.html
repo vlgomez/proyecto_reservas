@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gestión de Reservas de Eventos</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
-<body class="container mt-4">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+<body class="bg-light">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Eventos</a>
-      <div class="collapse navbar-collapse">
+      <a class="navbar-brand" href="/">Eventos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#catalogo">Catálogo</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Mis reservas</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Iniciar sesión</a></li>
+          <li class="nav-item"><a class="nav-link" href="/login">Iniciar sesión</a></li>
+          <li class="nav-item"><a class="nav-link" href="/registro">Registro</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <h1 class="mb-4">Catálogo de Eventos</h1>
-  
-  <div class="card mb-3">
-    <div class="card-body">
-      <h5 class="card-title">🎸 Concierto Rock</h5>
-      <p class="card-text">Fecha: 10/10/2025 - Lugar: Madrid</p>
-      <button class="btn btn-primary">Reservar</button>
-    </div>
-  </div>
-  
-  <div class="card mb-3">
-    <div class="card-body">
-      <h5 class="card-title">💻 Charla de Tecnología</h5>
-      <p class="card-text">Fecha: 20/10/2025 - Lugar: Barcelona</p>
-      <button class="btn btn-primary">Reservar</button>
-    </div>
-  </div>
+  <!-- CONTENIDO -->
+  <main class="container mt-4">
+    <h1 class="mb-4" id="catalogo">Catálogo de Eventos</h1>
+
+    <!-- Aquí se cargan las tarjetas dinámicas -->
+    <div id="lista-eventos"></div>
+  </main>
+
+  <!-- SCRIPTS -->
+  <script src="./js/catalogo.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
